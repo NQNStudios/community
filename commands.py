@@ -1,6 +1,7 @@
 from talon import Module, app, actions
 import subprocess
 from os import environ
+from . pipeclient import PipeClient
 
 mod = Module()
 
@@ -17,3 +18,7 @@ class Actions:
     def type():
         """launch audacity"""
         subprocess.call(["open", "-a", "Audacity"])
+        client = PipeClient()
+        client.write("GetInfo")
+        print(client.wait_read())
+
