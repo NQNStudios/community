@@ -25,6 +25,9 @@ class Actions:
     def view_config():
         """view talon config"""
         subprocess.call(["open", f'{HOME}/.talon/user/community'])
+    def code():
+        """switch to VS Code"""
+        actions.mimic("focus code")
 
     def type():
         """launch audacity, record audio, then transcribe it with Whisper"""
