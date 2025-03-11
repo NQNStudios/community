@@ -44,6 +44,11 @@ sift <user.text>:
     insert("sf::")
     insert(user.hammer(text))
 
+void <user.text>:
+    insert("void ")
+    insert(user.snake(text))
+    insert("() {}")
+
 get push:
     insert("git push\n")
 

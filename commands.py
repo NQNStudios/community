@@ -39,6 +39,7 @@ class Actions:
 
 	def snake(phrase:str) -> str:
 		"""snake-case of a word"""
+		return '_'.join(phrase.split(" "))
 
 
 	def type():
